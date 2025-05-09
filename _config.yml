@@ -1,165 +1,128 @@
-# The Site Configuration
+# 사이트 설정
 
-# Import the theme
+# 테마 지정
 theme: jekyll-theme-chirpy
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
-lang: en
+# 웹사이트 언어 설정 › http://www.lingoes.net/en/translator/langcode.htm
+lang: ko
 
-# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+# 시간대 설정 › https://kevinnovak.github.io/Time-Zone-Picker
+timezone: Asia/Seoul
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# jekyll-seo-tag 설정 › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: 나만의 기술 블로그 # 사이트 제목
+tagline: 개발을 기록하는 블로그 # 부제목
+description: >-
+  기술 문서 작성을 위한 미니멀하고 반응형인 Jekyll 테마입니다.
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
-
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
-
-# Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+# 배포 주소 (예: https://username.github.io) — 슬래시 `/`로 끝나지 않도록 주의
+url: "https://rlagusals1102.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: rlagusals1102
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: your_twitter_username
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: 김현민 # 본인 이름
+  email: your_email@example.com # 이메일 주소
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
-    # Uncomment below to add more social links
+    - https://twitter.com/your_twitter_username
+    - https://github.com/rlagusals1102
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-# Site Verification Settings
+# 검색 엔진 인증용 메타태그
 webmaster_verifications:
-  google: # fill in your Google verification code
-  bing: # fill in your Bing verification code
-  alexa: # fill in your Alexa verification code
-  yandex: # fill in your Yandex verification code
-  baidu: # fill in your Baidu verification code
-  facebook: # fill in your Facebook verification code
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
 
 # ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
+# jekyll-seo-tag 설정 끝
 
-# Web Analytics Settings
+# 웹 분석 도구 설정
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-XXXXXXXXXX # 구글 애널리틱스 ID
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id:
   umami:
-    id: # fill in your Umami ID
-    domain: # fill in your Umami domain
+    id:
+    domain:
   matomo:
-    id: # fill in your Matomo ID
-    domain: # fill in your Matomo domain
+    id:
+    domain:
   cloudflare:
-    id: # fill in your Cloudflare Web Analytics token
+    id:
   fathom:
-    id: # fill in your Fathom Site ID
+    id:
 
-# Page views settings
+# 페이지 조회수 제공자 설정 (현재 goatcounter만 지원)
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider:
 
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light — Use the light color scheme
-#     dark — Use the dark color scheme
-#
-theme_mode: # [light | dark]
+# 다크/라이트 모드 기본값 설정
+# 빈 값으로 둘 경우 시스템 설정을 따름
+theme_mode: light
 
-# The CDN endpoint for media resources.
-# Notice that once it is assigned, the CDN url
-# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
+# CDN을 사용하는 경우 해당 주소를 지정 (예: 'https://cdn.example.com')
 cdn:
 
-# the avatar on sidebar, support local or CORS resources
+# 사이드바에 표시할 아바타 이미지 (URL 또는 로컬 경로)
 avatar:
 
-# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
-# It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+# SEO og:image 설정용 기본 이미지
+social_preview_image:
 
-# boolean type, the global switch for TOC in posts.
+# 전체 글에 대해 목차(TOC) 표시 여부
 toc: true
 
+# 댓글 시스템 설정
 comments:
-  # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
-  # The provider options are as follows:
-  disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+  provider: giscus
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    repo: rlagusals1102/rlagusals1102.github.io
+    repo_id: your_repo_id
+    category: General
+    category_id: your_category_id
+    mapping: pathname
+    input_position: bottom
+    reactions_enabled: 1
+    lang: ko
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+# 정적 자산을 자가 호스팅할 경우 설정
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
-    # specify the Jekyll environment, empty means both
-    # only works if `assets.self_host.enabled` is 'true'
-    env: # [development | production]
+    enabled:
+    env:
 
+# PWA(웹앱 설치 지원) 설정
 pwa:
-  enabled: true # The option for PWA feature (installable)
+  enabled: true
   cache:
-    enabled: true # The option for PWA offline cache
-    # Paths defined here will be excluded from the PWA cache.
-    # Usually its value is the `baseurl` of another website that
-    # shares the same domain name as the current website.
+    enabled: true
     deny_paths:
-      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
+# 페이지네이션: 한 페이지당 글 수
 paginate: 10
 
-# The base URL of your site
-baseurl: ""
+# 사이트의 baseurl (GitHub Pages의 경우 보통 repository 이름)
+baseurl: "/rlagusals1102"
 
-# ------------ The following options are not recommended to be modified ------------------
+# 아래는 특별한 경우가 아니라면 수정하지 않는 것을 권장합니다
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts:
     css_class: highlight
-    # default_lang: console
     span:
       line_numbers: false
     block:
@@ -173,14 +136,12 @@ collections:
 
 defaults:
   - scope:
-      path: "" # An empty string here means all files in the project
+      path: ""
       type: posts
     values:
       layout: post
-      comments: true # Enable comments in posts.
-      toc: true # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
+      comments: true
+      toc: true
       permalink: /posts/:title/
   - scope:
       path: _drafts
@@ -188,7 +149,7 @@ defaults:
       comments: false
   - scope:
       path: ""
-      type: tabs # see `site.collections`
+      type: tabs
     values:
       layout: page
       permalink: /:title/
