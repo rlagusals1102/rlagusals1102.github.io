@@ -2,17 +2,25 @@
 
 - type: github
   icon: "fab fa-github"
-
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+  url: "https://github.com/rlagusals1102"
 
 - type: email
   icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+  url: "mailto:rlagusals1102@gmail.com"
+  noblank: true
 
 - type: rss
   icon: "fas fa-rss"
+  url: "/feed.xml"
   noblank: true
+
+- type: blog
+  icon: "fas fa-blog"
+  url: "https://blog.khm1102.com"
+
+- type: solvedac
+  icon: "fas fa-code"
+  url: "https://solved.ac/profile/rlagusals1102"
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
